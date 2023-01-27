@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+    <script>
+
+        window.onload = function (){   // nesse caso o window.onload ser para qnd a pagina ser carregada ele vai executar oq tiver dentro dessa função
+            console.log("carregado");
+
+            let d1 = document.getElementById("d1");
+            //aq ele ta criando uma variavel d1 para ser responsavel pelo id 'd1' q foi criado la no html
+            
+            console.log(d1.children); //aq ele vai imprimir uma lista com as tag filhas do id 'd1'. no caso vai criar uma lista com as tags q estao dentro da div 'd1'
+            // e caso queira apenas uma tag em especifico basta fazer a referencia igual é feito com as listas
+            console.log(d1.children[1]);
+
+            // da mesma forma q é possivel pegar os elementos filhos, tb é possivel pegar o elemento pai daquela tag
+            let h1 = d1.children[0];  //primeiro eu atribui a h1 o elemento filho 1, q no caso é a tag <h1>Titulo</h1>
+            console.log(h1.parentElement);  // e aq eu mandei imprimir o elemento pai do filho h1. é quase como se eu tivesse pedido para ele me devolver o elemento anterior ao h1 q comporta todas as outras tag(na console fica mais facil de ver oq foi explicado)
+
+            // EXEMPLOS (boa vizualização qnd verificado o resultado no console)
+            console.log(document.body.children);//lista com todas as tags 
+            console.log(document.body.children[0]); //aq ele vai mostrar apenas a tag naquela posição da lista
+            console.log(document.body.children[0].children);  // e aq ele vai mostrar os filhos do filho 0. no caso ele vai mostrar os filhos da primeira div com o id 'd1'
+            
+            h1 = document.getElementsByTagName("h1");  // aq ele ta re-atribuindo a variavel h1 todas as tag h1. no caso vai ficar tudo dentro de uma lista
+            console.log(h1);
+
+            for (let h of h1){
+                console.log(h);
+
+                h.addEventListener("click", qop)
+            }
+            function qop(e) {
+                let t = e.target;
+                console.log(t.parentElement);
+            }
+
+            // e por fim foi adicionado um evento click nas tags h1, q qnd selecionada vai imprimir no console a tag pai dela
+            // e qualquer nova tag h1 criada tb vai ter essa função de mostrar o pai dela **
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    <div id="d1">
+        <h1>Titulo</h1>
+        <p>Qualquer texto</p>
+    </div>
+    <div id="d2">
+        <h1>Titulo 2</h1>
+        <p>Qualquer texto 2</p>
+    </div>
+
+    <h1>teste</h1>  <!-- **nesse caso ele vai mostrar o pai dela q é o proprio body -->
+
+
+
+
+
+
+
+</body>
+</html>

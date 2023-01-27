@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            float: left;
+            color: white;
+            margin-left: 15px;
+        }
+
+        .header{
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            background: #5c57a4;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        .logo{
+            float: left;
+            color: white;
+        }
+
+        /* a ordem de organização dos @media influencia no resultado final do codigo
+        tomar cuidado na hora de organizar os itens */
+        @media screen and (max-width: 700px){
+            .header{
+                background-color: red;
+            }
+        }
+
+        @media screen and (max-width: 500px){
+            /* a tela qnd chegar a menos doq 500px vai executar esses comandos de css abaixo */
+            .header{
+                background-color: gray;
+            }
+            .logo{
+                float: none;
+                text-align: center;
+            }
+            .menu{
+                margin-top: 20px;
+                float: none;
+                text-align: center;
+            }
+            li{
+                margin-bottom: 5px;
+                padding: 10px;
+                float: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            Logo
+        </div>
+    
+        <ul class="menu">
+            <li>Home</li>
+            <li>Cursos</li>
+            <li>Contato</li>
+            <li>Escritorios</li>
+            <li>Suporte</li>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>

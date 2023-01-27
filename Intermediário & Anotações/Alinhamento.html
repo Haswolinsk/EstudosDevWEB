@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        body{
+            font-size: 1.2rem;
+        }
+        
+        /* estudo para centralizar elementos */
+        .card{
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .card2{
+            clear: left;
+            float: left;
+            border: 2px solid black;
+            padding: 130px;
+            /* tb funciona com o padding porem ele leva em consideração o tamanho em px do texto
+            q acaab modificando o tamanho do height*/
+        }
+        .c1{
+            line-height: 200px;
+            /* serve para ajustar no centro
+            desvantagem: tem q saber o tamanho do elemento pai */
+        }
+        .c2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* meio q funciona como uma função considerando X e o Y da tabela */
+        }
+
+        /* testezin de responsividade */
+        .header{
+            position: relative;
+            margin: auto;
+            height: 150px;
+            width: 80%;
+            background-color: gray;
+        }
+        .content{
+            /* margin: auto; */
+            /* outra forma de fazer o mesmo q o auto fez: */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            height: 70%;
+            width: 70%;
+            background-color: bisque;
+
+            text-align: center;
+            font-size: 6vw;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="c1">
+            André Haswolinsk
+        </div>
+    </div>
+    <div class="card">
+        <div class="c2">
+            André Haswolinsk
+        </div>
+    </div>
+    <div class="card2">
+        <div class="">
+            André Haswolinsk
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- testezin de responsividade -->
+    <div class="header">
+        <div class="content">
+            Hello World!
+        </div>
+    </div>
+</body>
+</html>

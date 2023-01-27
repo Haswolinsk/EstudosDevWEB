@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 2</title>
+    
+
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+    <script src="./JS/eventos.js"></script>
+</head>
+
+<body onload="loaded()">
+<!-- para ser executado normalmente o codigo basta colocar uma função dentro do body somado com o onload -->
+    
+    <!-- <img src="https://i.pinimg.com/originals/90/f4/ef/90f4ef99b17e72ed0a09710060e4bb80.jpg">
+    <br>
+    <div onmouseover="onOver2(this)" onmouseout="offOver(this)">Click</div>
+
+    <p onmouseover="onMouseOver()" onmouseout="offMouseOver()">Texto para teste</p>
+    
+    <h1 id="titulo">teste</h1> -->
+
+    <h1 onclick="f()">Title</h1>
+    <!-- **** <h1 onclick="f(this)">Title</h1> **** -->
+
+    
+</body>
+<script>
+    function f(e){            // o 'e' aq funciona como uma variavel nova q pode ser usada normalmente
+        e = 10
+        console.log("Teste");
+        console.log(this);
+        console.log(e);   // ****aq iria mostrar a tag
+
+        //dentro desse primeiro exemplo caso eu queria referenciar a tag eu teria q passar o this dentro da variavel
+        // ai o 'e' se tornaria n mais uma variavel nova e sim uma referencia a tag
+    }
+
+    function f1(e){            // ja aq ele vai referenciar oq essa função é, q no caso é uma função de evento click
+        console.log("teste f1");
+        console.log(this);
+        console.log(e);   //enquanto o 'e' vai referenciar o evento(q no caso é o click)
+        console.log(e.target);   // o target vai funcionar igual ao this
+    }
+
+    window.onload = function (){
+        let h1 = document.getElementsByTagName("h1")[0];
+
+        h1.addEventListener("click", f1);  // aq n foi necessario so parentesses pq a aplicação ja entende q isso aq se refere a uma função. o mesmo n funciona para html pq se n ele n entenderia q aquilo é de uma função
+    }
+</script>
+</html>

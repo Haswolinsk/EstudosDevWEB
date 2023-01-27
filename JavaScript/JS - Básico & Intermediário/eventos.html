@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+        div{
+            display: inline-block;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body onload="console.log('Página Completamente Carregada')">
+    
+    <!-- <h1>Clique em mim</h1> -->
+
+        
+    <!-- <input id="texto" type="text" onchange="changeH1(this)"> -->
+    <!-- 
+        onclick: qnd clicado vai ser executado oq estiver dentro
+        onchange: td q eu digitei vai ser retornado ou qnd eu clicar fora do input ou qnd eu der enter
+        oninput: é atualizado automaticamente enquanto voce digita
+        onload: é um evento q vai ser executado apos a pagina inteira ser carregada
+
+    -->
+    
+    <img src="https://i.pinimg.com/originals/90/f4/ef/90f4ef99b17e72ed0a09710060e4bb80.jpg">
+    <br>
+    <div onmouseover="onOver(this)">Click</div>
+
+
+
+
+    <script src="./JS/eventos.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Display</title>
+    <style>
+        body{
+            font-size: 1.2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div style="background-color: blue;">
+        <div >Esta é uma DIV normal</div>
+        <div >E aqui a história<div style="background-color: red; width: 500px; height: 50px;"> de dentro</div> continua</div>
+        <!-- div tem o display block, podendo modificar a largura e altura dele -->
+    </div>
+
+    <div >
+
+        <p style="margin: 0;">Este é um parágrafo normal</p>
+        <p style="margin: 0;">E aqui a história continua</p>
+
+    </div>
+
+    <p>
+
+        Aqui eu tenho o inicio de um parágrafo <span style="background-color: green; width: 500px; height: 50px; display: inline-block;">um 
+        SPAN no meio</span> e o fim do parágrafo.
+        <!-- ja o span tem o display inline q acaba ficando limitado dependendo do seu conteudo interno -->
+        <!-- o display inline-block serve para o elemento ter a caracterisca do display block no meio da linha -->
+    </p>
+
+    <p style="background-color: blue;">
+
+        Aqui eu tenho o inicio de um parágrafo<div style="background-color: red;"> uma DIV
+        no meio</div> E o fim do parágrafo.
+        <!-- n se deve utilizar um elemento do tipo block dentro de um paragrafo, pq vai quebrar o paragrafo em dois -->
+
+    </p>
+
+    <p>
+        Aqui eu tenho o inicio de um parágrafo <img src="../Básico & Anotações/imagens/Calamidade.jpg" 
+        alt="So teste" style="width: 100px; display: none;"> E o fim de um parágrafo.
+        <!-- display none mais ou menos como se apagasse o elemento -->
+        <!-- tb existe o visibility: hidden; q vai esconder o elemento, mas o espaço dele ainda continua preenchido(testando é mais facil de entender...) -->
+    </p>
+    
+    
+
+
+</body>
+</html>

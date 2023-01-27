@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .quadro{
+            width: 700px;
+            height: 400px;
+            height: 1000px;/*  exemplo do fixed e do sticky */
+            border: 2px solid black;
+            position: relative;
+        }
+        .quadrado{
+            width: 100px;
+            height: 100px;
+        }
+        .q-red{
+            position: sticky;/* exemplo perfeito de uma boa header */
+            top: 0px;
+            width: 100%;
+            /* position: relative;
+            top: 10px;
+            left: 30px;  */
+            /* 
+            o position: relative permite q altere a posição do elemento sem alterar os outros ao redor
+            dentro do msm exemplo se tivesse sido utilizado o margin, ele teria modificado os outros dois quadrados tb 
+            */
+            background-color: red;
+        }
+        .q-blue{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            /* 
+            a posição inicial dele n afeta os outros elementos
+            ent o elemento na sequencia acaba ficando por baixo do azul
+            ele sempre vai considerar a posição de acordo com o position do elemento anterior(position pai) NAO SENDO UM POSITION STATIC
+            */
+            background-color: blue;
+        }
+        .q-green{
+            /* position: sticky;
+            top: 30px;
+            left: 30px; */
+            /* serve para adicionar um elemento na pagina q vai rolar junto dela, tipo aquele anuncios flutuantes */
+            /* position: fixed; */
+            /* a posição fica fixa em relação a pagina tipo aqueles elementos do "entre em contato conosco" e etc */
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadro">
+        
+        <div class="quadrado q-red"></div>
+        <div class="quadrado q-blue"></div>
+        <div class="quadrado q-green"></div>
+
+    </div>     
+</body>
+</html>

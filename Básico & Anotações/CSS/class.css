@@ -1,0 +1,235 @@
+
+#paragrafos{
+    color: rgb(255, 251, 0);
+    background-image: url(../imagens/rgb\ bunito.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#titulo{
+    color: #ff0;
+}
+
+/* 
+#cm{
+    background-color: blue;
+    width: 1cm;
+    height: 1cm;
+}
+#mm{
+    background-color:red;
+    width: 1mm;
+    height: 1mm;
+}
+#in{
+    background-color:yellow;
+    width: 1in;
+    height: 1in;
+}
+#px{
+    background-color:blue;
+    width: 10px;
+    height: 10px;
+}
+#pt{
+    background-color:red;
+    width: 10pt;
+    height: 10pt;
+}
+#pc{
+    background-color:yellow;
+    width: 1pc;
+    height: 1pc;
+}
+*/
+
+.textoVerde{
+    color: #ff0000;
+}
+.subDiv{
+    background-color: red;
+}
+.EstilodeLink{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    /* background: #bc2035; */
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid red;
+    border-radius: 8px;
+    
+}
+.EstilodeLink:hover{
+    background-color: #ff0000;
+    color: white;
+}
+.EstilodeLink:active{
+    background-color: #ffa600;
+    color: rgb(0, 0, 0);
+}
+.EstilodeLink:visited{
+    border-color: lightcoral ;
+    color: lightcoral;
+}
+
+
+.gradient{
+    height: 200px;
+    width: 700px;
+    background: linear-gradient(160deg,rgb(0 ,100 , 0)35% 50%, yellow 60% 70%, blue 95%, white);
+    /* 
+    possibilidades com o gradient:
+    background: linear-gradient(to right bottom, red, green, blue);
+    indicar a direção
+
+    background: linear-gradient(30deg, red, green, blue);
+    indicar a direção com graus
+
+    background: linear-gradient(to right bottom, red, green 25%, blue);
+    indicar apartir de qnt vai começar a mudar a cor
+
+
+    */
+}
+
+
+
+.container{
+    font-size: 25px;
+
+    width: 300px;
+    background-color: blue;
+}
+.inside{
+    font-size: 2em;
+
+    width: 1em;
+    background-color: red;
+
+    /* 
+    O "em" é sempre referente ao tamanho da font, caso ela n seja modificada vai ser por padrao 16px 
+    
+    Nesse meu exemplo ficou a medida 25px pq foi definido anterioriormente o font-size e a div seguinte 
+    pegou como base e multiplicou por 2 ficando: 2em = 50px = 2 * 25px
+    
+    No width tb vai ser utilizado a mesma linha de racicionio, 
+    como "em" é relativo a font ent esse width vai ser igual a 25px 
+    */
+}
+
+
+/* considerar como se estivesse ativo para o container e inside 2!!!
+html{
+    font-size: 20px;
+}
+ */
+.container2{
+    font-size: 15px;
+}
+.inside2{
+    font-size: 2rem;
+    /* 
+    o "rem" é referente ao html original, caso modifique igual no exemplo ent ele muda
+    caso n tenha modificado vai ser igual a 16px
+    */
+}
+
+
+.container3{
+    width: 50vw;
+    background: red;
+    border: 5px dashed black;
+
+    /* sobre o border
+    o primeiro vai fazer referencia ao tamanho da borda
+    o segunda vai fazer referencia ao estilo da borda 
+    e o ultimo vai fazer referencia a cor da borda    
+    */
+
+    /* 
+    "vw" é referente a largura da tela
+    1vw = 1% da tela
+    50vw = 50% da tela
+    */
+
+}
+.inside3{
+    /* width: 100%; (exemplo de porcentagem)*/
+    width: 50vh;
+    background: blue;
+
+    /* 
+    "vh" é referente a altura da tela
+    1vh = 1% da tela
+    50vh = 50% da tela
+    Não esquecer q o height so aumenta referente ao elementos
+    */
+
+}
+/* 
+Não esquecer q "%" é sempre referente ao elemento pai(verificar exemplo)
+
+tambem existe o "vmin" e o "vmax"
+o "vmin" ele vai modificar de acordo com o elemento q for menor entre altura e largura
+e o "vmax" é o inverso, caso a largura seja maior q a altura ele começa a modificar o outro e vice versa.
+mais facil de entender vendo na pratica(provavelmente bom de conferir no f12 do google)
+*/
+
+#primeira{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 10px solid black;
+    box-sizing: border-box; /* serve para q o width e o height sejam absolutos. caso desabilitado o tamanho iria aumentar de acordo com o padding e o border adicionados*/
+    margin: 20px; /* margin ainda modifica pq é ao redor */
+
+}
+#segunda{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    margin: 20px;
+
+}
+
+
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+
+    overflow-y: scroll; /* adiciona scroll independente da direção */
+    overflow-x: hidden; /* hidden pra esconder */
+    
+    /* 
+    overflow: auto;
+    com o auto ele se adapta ao q é necessario.
+    caso tivesse um width ele ajustaria a barra lateral 
+    */
+
+}
+.lorem{
+    width: 400px;
+    font-size: 20px;
+
+}
+
+/* 
+        DICA IMPORTANTE SOBRE O MARGIN
+margin-left: auto;
+margin-right: auto;
+se somados eles centralizam um elemento
+POREM so funciona em elementos q ocupam a tela inteira, como uma div, paragrafo e etc
+margin: auto; (tem a mesma função)
+
+CUIDADOS: tem q prestar atenção quando utilizado pq isso faz com q o magin tenha a seguinte reação
+enquanto para os lados vai tentar ocupar o maior espaçamento possivel, na vertical ele vai tentar ocupar o menor espaço possivel
+
+
+text-align: center; 
+centraliza alguns elementos, testar é a melhor opção :]
+*/

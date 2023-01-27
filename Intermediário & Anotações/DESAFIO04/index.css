@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-size: 1.2rem;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 0.94rem;
+}
+p{
+    margin-top: 10px;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.container{
+    margin: auto;
+    width: 70%;
+}
+.header{
+    margin: 0;
+    padding: 5px;
+    color: white;
+    background-color: rgb(0, 178,207);
+    text-align: center;
+}
+.form{
+    background-image: url(http://s2.glbimg.com/0JvN8OZwEVizHyKvq2aHz_Nm2KE=/e.glbimg.com/og/ed/f/original/2016/02/10/thinkstockphotos-501062623.jpg);
+    height: 400px;
+    max-height: 600px;
+    position: relative;
+    display: block;
+    background-size: cover;
+}
+.cadastro{
+    background-color: rgba(255, 255, 255, 0.797);
+    margin: 20px;
+    padding: 10px 15px;
+    width: 30%;
+    height: 85%;
+    float: right;
+}
+.cadast{
+    font-size: 0.8rem;
+    padding: 6px;
+    margin-bottom: 5px;
+    width: -webkit-fill-available;
+}
+.button{
+    padding: 8px;
+    width: -webkit-fill-available;
+    background-color: rgb(45, 197, 255);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.bio{
+    margin: auto;
+    max-width: 100%;
+    max-height: 300px;
+    padding: 10px 250px;
+    color: white;
+    background-color: rgb(44, 44, 44);
+    /* position: relative; */
+    float: left;
+}
+
+.img{
+    margin: 40px;
+    height: 30%;
+    clear: left;
+    float: left;
+    height: 100%;
+}
+.biografio{
+    height: 60%;
+
+}
+h1{
+    
+}
+p{
+    
+}

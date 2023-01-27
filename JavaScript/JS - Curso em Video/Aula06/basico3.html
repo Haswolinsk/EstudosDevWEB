@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body{
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        /* Metodos de formatação de strings */
+        var teste = 'Teste da QuAntidade de caRacterEs'
+        console.log(teste);
+        console.log(teste.length)         //contagem da quantidade de letras da variavel
+        console.log(teste.toUpperCase())  //frase completa com letras maiusculas
+        console.log(teste.toLowerCase())  //frase completa com letras minusculas
+
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, <b>${nome}</b>! Seu nome tem ${nome.length} letras.<br>`)
+        //a contagem aq tb inclui os espaços
+        document.write(`Seu nome em letras maiusculas ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em letras minusculas ${nome.toLowerCase()}<br>`)
+        
+    </script>
+</body>
+</html>

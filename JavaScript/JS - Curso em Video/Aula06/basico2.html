@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Básico</title>
+    <style>
+        body{
+            background-color:aqua;
+            color: grey;
+            font: normal 50px arial;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+
+
+    <script>
+
+        var nome = window.prompt('Qual é o seu nome?')
+        window.alert('É um prazer te conhecer ' + nome + '!') //concatenação
+        window.alert(`É um grande prazer em te conhecer ${nome}!`) //Template Strings
+
+        /*                      LEMBRAR
+        !!!o window.prompt sempre retorna os valores no formato tipo string!!!
+
+        var num1 = window.prompt('Digite um numero: ')
+        var num2 = window.prompt('Digite outro numero: ')
+        var s = num1 + num2
+        window.alert(`A soma dos valores é ${s}`)
+        aq o resultado vai ser mostrado com a concatenação dos valores
+        */
+        //lembrar de sempre utilizar o Number.parseInt
+        var num1 = Number.parseInt(window.prompt('Digite um numero: '))
+        var num2 = Number.parseInt(window.prompt('Digite outro numero: '))
+        /* Lembrar de usar o Float caso tenha numero quebrado 
+        Number.parseFloat...*/
+        var s = num1 + num2
+        window.alert(`A soma dos valores é ${s}`)
+
+        /* ESQUECE TUDO, EXISTE A POSSIBILIDADE DE COLOCAR SO O NUMBER......... */
+
+        var n1 = Number(window.prompt('Digite um valor: '))
+        var n2 = Number(window.prompt('Digite outro valor: '))
+        var soma = n1 + n2
+        window.alert(`A soma dos valores é ${soma.toFixed(2)}`)
+        // .toFixed(x) para limitar a quantidade de caracteres dps da virgula
+        window.alert(`Resultado com a virgula = ${soma.toFixed(2).replace('.', ',')}`)
+        // aq ele vai fazer a troca do . com a virgula dentro da variavel
+        // tb funciona pra substituir qlqr tipo de valor q esteja dentro daquela variavel
+        // como por exemplo trocar algum numero do resultado por uma letra e etc
+        // -> ${soma.toFixed(2).replace('3', 'x')}
+
+        /* para converter a variavel em string basta usar ou o toString ou fazer igual com o number */
+        var testeString = String(soma)
+        var testeString2 = soma.toString()
+
+                    /* DICA */
+        /* formato para modificar automaticamente os valores pra uma moeda */
+        var s1 = Number(window.prompt('Meu salario: '))
+        console.log(s1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        // aq vai ser mostrado o valor de s1 no formato de dinheiro em real e seus respectivos:
+        console.log(s1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
+        console.log(s1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))
+        
+    </script>
+</body>
+</html>

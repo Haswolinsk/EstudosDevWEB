@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>Pesquisa do YouTube</h1>
+    <form action="https://www.youtube.com/results" method="get">
+        <!-- 
+        ainda n sei exatamente ql a diferença entre post e get
+        get ta mais pra um metodo de pesquisa e o post como envio de dados
+        pq o get mostra os dados passados na barra de pesquisa
+        -->
+        <input type="text" name="search_query">
+        <input type="submit" >
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>Estudo - checkbox & radio</h1>
+    <form action="get" action="">
+        <input type="text" name="nome"><br><br>
+        <input type="password" name="senha"><br><br>
+        <input type="checkbox" name="curso" value="op1">Reactive Native<br><br>
+        <input type="checkbox" name="curso" value="op2">Reactive Js<br><br>
+        <!-- na barra de pesquisa aparece apenas como ligado os botões selecionados
+        pra conseguir diferenciar e o BD interpretar corretamente se add um value -->
+        <input type="radio" name="gender" value="m" checked>Masc <br><br>
+        <input type="radio" name="gender" value="f">Fem <br><br>
+        <!-- no tipo radio apenas 1item pode estar selecionado 
+        importante colocar o name igual -- influencia na quantidade de itens q podem ser marcados(padrão = 1)
+        checked = serve pra algum dos botões ja começarem marcados
+        -->
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>Estudo - select</h1>
+    <form action="" method="get">
+
+        <select name="estado" size="1" multiple>
+            <!-- size é pra qnt de itens mostrados na tela
+            multiple serve pra marcar mais de um item -->
+            <option value="CE" selected>Ceará</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="CE" selected>Ceará</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="CE" selected>Ceará</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+        </select>
+
+        <input type="submit">
+
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>Estudo - textarea</h1>
+    <form action="" method="get">
+
+        <input type="text" name="assunto"><br>
+        <textarea name="messagem"></textarea>
+
+        <input type="submit">
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>Estudo - input/html5</h1>
+    <form action="" method="get">
+        <!-- existem algumas funcionalidades do html5 q n funcionam em alguns navegadores e por isso é sempre bom testar
+        um bom site pra verificar esses teste é o caniuse.com -->
+        <input type="color" name="cor"><br>
+        <input type="datetime-local" name="data" max="2018-12-15"><br>
+        <!-- o max é a data limite para preencher no campo -->
+        <input type="file" name="arquivo"><br>
+        <!-- para o envio de arquivo o form precisa estar em modo post para o servidor conseguir pegar e trabalhar com o arquivo-->
+        <input type="number" name="numerico" max="20" min="2"><br>
+        <input type="range" name="intervalo" min="5" max="10" value="8"><br>
+        <input type="tel" name="telefone"><br>
+        <!-- no navegador n tem tanta diferença mas se aberto no celular ele abre o teclado numerico para digitar o numero de telefone -->
+        <input type="email" name="email"><br>
+
+
+        <input type="submit">
+        
+    </form>
+
+
+
+
+
+</body>
+</html>
