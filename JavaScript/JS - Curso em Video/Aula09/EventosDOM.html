@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventosDOM</title>
+    <style>
+        body{
+            background-color: rgb(0, 110, 255);
+            color: white;
+            font: normal 20px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <P>Aqui vai o resultado</P>
+    <p>Aprendendo a usar o <b>DOM</b> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <br><br><br>
+    
+
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //aq eu peguei o primeiro paragrafo por meio da tag 
+        p1.style.color = 'black'
+        //aq é feito a manipulação dele
+        window.document.write(`Esta escrito assim: ${p1.innerHTML}`)
+        //a manipulação n é aplicada permanentemente
+
+        var corpo = window.document.body
+        /* corpo.style.background = 'black' */
+        //manipulação do style
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write(`<br>${p2.innerText}`)
+        //qnd é utilizado o innerText ele mostra todo o texto soq sem a formatação
+        //nesse caso veio sem o negrito da tag 'b'
+
+        var d = window.document.getElementById('msg')  //tb seria possivel fazer a seleção por meio do getElementByName('msg')[0]
+        d.innerText = 'Estou no aguardo'
+        /* var d = window.document.getElementById('msg').innerText = 'Estou no aguardo...' */
+        //maneira simplificada de escrever a mesma coisa
+
+        
+                ///////////QUERYSELECTOR/////////////
+        var msg = window.document.querySelector('div#msg')
+        //a '#' para representar um id e caso necessario um '.' para representar uma class
+        msg.style.background = 'black'
+
+        /* 
+        OUTRAS MANEIRAS DE USAR O QUERYSELECTOR:
+        msg = window.document.querySelector('.class')  
+        //aq vai modificar todas as class de mesmo nome
+        msg = window.document.querySelector('#id')     
+        //aq vai modificar todos os id de mesmo nome
+
+        msg = window.document.querySelector('div > p')
+        //aq ele vai selecionar a primeira tag 'p' com o pai sendo uma div
+
+        msg = window.document.querySelector('p[0]')
+        //aq vai fazer do mesmo esquema q os primeiros exemplos soq usando o query selector
+
+        msg = window.document.querySelector('h1, p')
+        //caso seja necessario selecionar mais de uma tag basta separar com uma virgula
+        */
+
+
+    </script>
+
+</body>
+</html>
