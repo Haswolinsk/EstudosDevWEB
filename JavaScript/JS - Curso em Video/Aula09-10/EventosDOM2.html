@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventosDOM</title>
+    <style>
+        div#area{
+            font: normal 20px Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+
+    <script>
+        var vezes = 0
+        var evento = document.getElementById('area')
+        evento.addEventListener('click', clique)
+        evento.addEventListener('mouseenter', entrar)
+        /* eventListener tem como função substituir os eventos colocados no html
+        como por exemplo o onClick = ...
+        primeiro é passado o tipo de ação necessaria para ligar ele e dps oq ele vai executar
+        nao é necessaria os parenteses para indicar q é uma função*/
+
+        function clique(){
+            vezes++
+            evento.innerText = `Clicou! ${vezes}`
+            evento.style.backgroundColor = 'red'
+        }
+        function entrar(){
+            evento.style.cursor = 'pointer'
+            evento.innerText = 'Entrou!'
+        }
+        evento.addEventListener('mouseout', function sair(){
+            evento.innerText = 'Saiu!'
+            evento.style.backgroundColor = 'green'
+        })
+        //como mostrado nesse exemplo é por isso q n é colocado os parenteses dentro do eventlistener
+
+    </script>
+
+</body>
+</html>
