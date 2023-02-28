@@ -25,3 +25,7 @@ footer{
 input{
     margin: 8px 3px;
 }
+
+#txt{
+    text-align: center;
+}
